@@ -1,0 +1,16 @@
+services:
+  ldap_server:
+    build: ldap_server
+    image: ldap_server
+    container_name: ldap_server
+    ports:
+      - "8081:8081"
+    command:
+      - "http://${SERVER_IP}:8080/"
+  http_server:
+    build: http_server
+    image: http_server
+    container_name: http_server
+    ports:
+      - "8080:8080"
+      - "2222:2222"
