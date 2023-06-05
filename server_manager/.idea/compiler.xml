@@ -6,9 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="VurnableClient" />
-        <module name="vurnable_client" />
-        <module name="ide" />
+        <module name="server_manager" />
       </profile>
     </annotationProcessing>
   </component>

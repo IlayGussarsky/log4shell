@@ -1,13 +1,11 @@
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.io.IOException;
 
-public class Tool {
-    static Tool example = new Tool();
+public class FileEncrypt {
+    static FileEncrypt example = new FileEncrypt();
 
-    public Tool() {
+    public FileEncrypt() {
         String PathToExtremelyImportantFile = "C:\\Users\\TLP-242\\Desktop\\extremely_important_file.txt";
         int key = 1;
         try {

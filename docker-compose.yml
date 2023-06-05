@@ -14,3 +14,19 @@ services:
     ports:
       - "8080:8080"
       - "2222:2222"
+  minecraft-server:
+    build:
+      context: server_manager
+      dockerfile: Dockerfile
+      args:
+        - SERVER_IP=${SERVER_IP}
+        - CLIENT_IMAGE=${CLIENT_IMAGE}
+    environment:
+      - SERVER_IP=${SERVER_IP}
+      - CLIENT_IMAGE=${CLIENT_IMAGE}
+    image: server_manager
+    container_name: server_manager
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "25565:25565"
